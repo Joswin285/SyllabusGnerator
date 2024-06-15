@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syllabus Maker</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="app">
+        <section>
+            <div class="content">
+                <aside>
+                    <img src="/static/images/syllabus-maker-icon.png" alt="Syllabus Maker logo" class="logo">
+                </aside>
+                <main aria-label="Main" class="form-container">
+                    <div class="card">
+                        <div class="card-body">
+                            <h1 class="card-title">Syllabus Maker 💡</h1>
+                            <p class="description">Whether you're struggling with creating a syllabus or just looking for a quick and easy way to plan your course, we've got you covered. Our app suggests a comprehensive syllabus for any topic, making course planning a breeze.</p>
+                            <form id="syllabus-form" class="form">
+                                <div class="form-group">
+                                    <label for="topic">Course Topic</label>
+                                    <input type="text" id="topic" name="topic" placeholder="Input a course topic" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="educational-level">Educational Level</label>
+                                    <select id="educational-level" name="educational-level">
+                                        <option value="Primary">Primary</option>
+                                        <option value="Secondary">Secondary</option>
+                                        <option value="Tertiary">Tertiary</option>
+                                        <option value="Graduate">Graduate</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn">Generate Syllabus</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <p id="love">© VisionX</p>
+                </main>
+            </div>
+        </section>
+    </main>
+
+    <!-- Loading Animation -->
+    <div class="loading" id="loading">
+        <div class="spinner">
+            <div class="dot1"></div>
+            <div class="dot2"></div>
+            <div class="dot3"></div>
+            <div class="dot4"></div>
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div class="modal" id="syllabus-modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-btn">&times;</span>
+            <div class="ai-response"></div>
+        </div>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
